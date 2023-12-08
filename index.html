@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple CRUD Web Page</title>
+  </head>
+  <body>
+    <h2>Simple Item Manager</h2>
+
+    <input type="text" id="itemInput" placeholder="Enter item" />
+    <button onclick="createItem()">Add Item</button>
+    <button onclick="showUpdateSection()">Update Item</button>
+    <button onclick="deleteItem()">Delete Item</button>
+
+    <div id="updateSection" style="display: none">
+      <input type="text" id="currentItem" placeholder="Current item" />
+      <input type="text" id="newItem" placeholder="New item" />
+      <button onclick="updateItem()">Update</button>
+    </div>
+
+    <h3>Items List:</h3>
+    <ul id="itemsList"></ul>
+
+    <script src="script.js"></script>
+  </body>
+</html>
