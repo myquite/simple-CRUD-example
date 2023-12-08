@@ -1,3 +1,3 @@
 # Simple CRUD
 
-A brief description of the project.
+This is a very basic CRUD application that uses LocalStorage to persist the data.
