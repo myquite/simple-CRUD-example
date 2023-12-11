@@ -54,6 +54,10 @@ function showUpdateSection() {
   document.getElementById("updateSection").style.display = "block";
 }
 
+function cancelUpdate() {
+  document.getElementById("updateSection").style.display = "none";
+}
+
 /**
  * Updates an item in the items array.
  * Finds the index of the current item, replaces it with the new item,
