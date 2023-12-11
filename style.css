@@ -4,17 +4,33 @@ body {
   background-color: #f0f0f0;
 }
 
+.wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 #itemsList {
   list-style-type: none;
   padding: 0;
 }
 
 #itemsList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fff;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#editInput {
+  margin-top: 20px;
 }
 
 input[type="text"] {
@@ -27,14 +43,24 @@ input[type="text"] {
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
 }
 
+button.update,
+button.delete {
+  font-size: 16px;
+  border: 1px solid #dedede;
+  background-color: #ececec;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+button.update {
+  font-size: 18px;
+}
+
 button:hover {
-  background-color: #0056b3;
+  background-color: #ccc;
 }
