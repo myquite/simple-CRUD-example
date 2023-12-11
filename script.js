@@ -53,20 +53,25 @@ function createItem() {
  */
 function displayItems() {
   const itemsList = document.getElementById("itemsList");
-  itemsList.innerHTML = "";
-  items.forEach((item, index) => {
-    itemsList.innerHTML += `
-      <li>
-        <div class="item">
-          <span>${item}</span>
-        </div>
-        <div class="buttons">
-          <button class="update" onclick="updateItem(${index})">✎</button>
-          <button class="delete" onclick="deleteItem(${index})">ｘ</button>
-        </div>
-      </li>
-    `;
-  });
+  if (items.length === 0) {
+    itemsList.innerHTML =
+      '<p class="blankList">Nothing on your list? Get started!</p>';
+  } else {
+    itemsList.innerHTML = "";
+    items.forEach((item, index) => {
+      itemsList.innerHTML += `
+        <li>
+          <div class="item">
+            <span>${item}</span>
+          </div>
+          <div class="buttons">
+            <button class="update" onclick="updateItem(${index})">✎</button>
+            <button class="delete" onclick="deleteItem(${index})">ｘ</button>
+          </div>
+        </li>
+      `;
+    });
+  }
 }
 
 function cancelUpdate() {
